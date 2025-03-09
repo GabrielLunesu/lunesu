@@ -32,14 +32,19 @@ export default function Contact() {
       { threshold: 0.1 }
     );
 
-    if (headingRef.current) observer.observe(headingRef.current);
-    if (formRef.current) observer.observe(formRef.current);
-    if (infoRef.current) observer.observe(infoRef.current);
+    // Store refs in variables to use in cleanup
+    const headingElement = headingRef.current;
+    const formElement = formRef.current;
+    const infoElement = infoRef.current;
+
+    if (headingElement) observer.observe(headingElement);
+    if (formElement) observer.observe(formElement);
+    if (infoElement) observer.observe(infoElement);
 
     return () => {
-      if (headingRef.current) observer.unobserve(headingRef.current);
-      if (formRef.current) observer.unobserve(formRef.current);
-      if (infoRef.current) observer.unobserve(infoRef.current);
+      if (headingElement) observer.unobserve(headingElement);
+      if (formElement) observer.unobserve(formElement);
+      if (infoElement) observer.unobserve(infoElement);
     };
   }, []);
 

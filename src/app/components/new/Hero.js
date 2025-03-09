@@ -11,17 +11,23 @@ export default function Hero() {
   const imageRef = useRef(null);
 
   useEffect(() => {
-    if (titleRef.current) {
-      titleRef.current.classList.add('animate-fade-in');
+    // Store refs in variables to use in animations and cleanup
+    const titleElement = titleRef.current;
+    const subtitleElement = subtitleRef.current;
+    const ctaElement = ctaRef.current;
+    const imageElement = imageRef.current;
+
+    if (titleElement) {
+      titleElement.classList.add('animate-fade-in');
     }
-    if (subtitleRef.current) {
-      subtitleRef.current.classList.add('animate-fade-in', 'stagger-1');
+    if (subtitleElement) {
+      subtitleElement.classList.add('animate-fade-in', 'stagger-1');
     }
-    if (ctaRef.current) {
-      ctaRef.current.classList.add('animate-fade-in', 'stagger-2');
+    if (ctaElement) {
+      ctaElement.classList.add('animate-fade-in', 'stagger-2');
     }
-    if (imageRef.current) {
-      imageRef.current.classList.add('animate-slide-in-right', 'stagger-1');
+    if (imageElement) {
+      imageElement.classList.add('animate-slide-in-right', 'stagger-1');
     }
   }, []);
 
@@ -63,7 +69,7 @@ export default function Hero() {
               ref={imageRef}
               className="relative opacity-0"
             >
-              <div className="w-[280px] h-[280px] md:w-[400px] md:h-[400px] rounded-full border-2 border-blue-500 p-2 bg-white">
+              <div className="w-[280px] h-[280px] md:w-[400px] md:h-[400px] rounded-full border-2 border-red-500 p-2 bg-black">
                 <div className="w-full h-full rounded-full overflow-hidden relative">
                   <Image 
                     src="/donato.jpg" 
@@ -75,8 +81,8 @@ export default function Hero() {
                 </div>
               </div>
               <div className="absolute bottom-0 left-0 right-0 text-center -mb-12">
-                <h2 className="text-2xl md:text-3xl rounded-full font-bold text-white bg-blue-500 inline-block px-4 py-2">
-                  Donato <span className="text-blue-900">Lunesu</span>
+                <h2 className="text-2xl md:text-3xl font-bold text-white bg-black inline-block px-4 py-2">
+                  Donato <span className="text-red-500">Lunesu</span>
                 </h2>
               </div>
             </div>

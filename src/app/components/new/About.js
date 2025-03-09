@@ -26,14 +26,19 @@ export default function About() {
       { threshold: 0.1 }
     );
 
-    if (headingRef.current) observer.observe(headingRef.current);
-    if (contentRef.current) observer.observe(contentRef.current);
-    if (imageRef.current) observer.observe(imageRef.current);
+    // Store refs in variables to use in cleanup
+    const headingElement = headingRef.current;
+    const contentElement = contentRef.current;
+    const imageElement = imageRef.current;
+
+    if (headingElement) observer.observe(headingElement);
+    if (contentElement) observer.observe(contentElement);
+    if (imageElement) observer.observe(imageElement);
 
     return () => {
-      if (headingRef.current) observer.unobserve(headingRef.current);
-      if (contentRef.current) observer.unobserve(contentRef.current);
-      if (imageRef.current) observer.unobserve(imageRef.current);
+      if (headingElement) observer.unobserve(headingElement);
+      if (contentElement) observer.unobserve(contentElement);
+      if (imageElement) observer.unobserve(imageElement);
     };
   }, []);
 

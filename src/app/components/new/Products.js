@@ -19,12 +19,16 @@ export default function Products() {
       { threshold: 0.1 }
     );
 
-    if (headingRef.current) observer.observe(headingRef.current);
-    if (productsRef.current) observer.observe(productsRef.current);
+    // Store refs in variables to use in cleanup
+    const headingElement = headingRef.current;
+    const productsElement = productsRef.current;
+
+    if (headingElement) observer.observe(headingElement);
+    if (productsElement) observer.observe(productsElement);
 
     return () => {
-      if (headingRef.current) observer.unobserve(headingRef.current);
-      if (productsRef.current) observer.unobserve(productsRef.current);
+      if (headingElement) observer.unobserve(headingElement);
+      if (productsElement) observer.unobserve(productsElement);
     };
   }, []);
 

@@ -152,7 +152,7 @@ export default function Footer() {
                 </p>
                 <h3 className="text-lg font-semibold mt-4">Cookies</h3>
                 <p>
-                  Onze website maakt gebruik van "cookies" om het bezoek aan de website te analyseren en het gebruiksgemak te verbeteren.
+                  Onze website maakt gebruik van &quot;cookies&quot; om het bezoek aan de website te analyseren en het gebruiksgemak te verbeteren.
                 </p>
                 <h3 className="text-lg font-semibold mt-4">Rechten</h3>
                 <p>

@@ -23,14 +23,17 @@ export default function Services() {
       { threshold: 0.1 }
     );
 
-    cardsRef.current.forEach((card) => {
+    // Create a copy of the current refs array to use in cleanup
+    const cards = [...cardsRef.current];
+
+    cards.forEach((card) => {
       if (card) {
         observer.observe(card);
       }
     });
 
     return () => {
-      cardsRef.current.forEach((card) => {
+      cards.forEach((card) => {
         if (card) {
           observer.unobserve(card);
         }

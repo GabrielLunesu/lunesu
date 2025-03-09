@@ -19,12 +19,16 @@ export default function Brands() {
       { threshold: 0.1 }
     );
 
-    if (headingRef.current) observer.observe(headingRef.current);
-    if (brandsRef.current) observer.observe(brandsRef.current);
+    // Store refs in variables to use in cleanup
+    const headingElement = headingRef.current;
+    const brandsElement = brandsRef.current;
+
+    if (headingElement) observer.observe(headingElement);
+    if (brandsElement) observer.observe(brandsElement);
 
     return () => {
-      if (headingRef.current) observer.unobserve(headingRef.current);
-      if (brandsRef.current) observer.unobserve(brandsRef.current);
+      if (headingElement) observer.unobserve(headingElement);
+      if (brandsElement) observer.unobserve(brandsElement);
     };
   }, []);
 
@@ -64,8 +68,8 @@ export default function Brands() {
               <Image 
                 src={brand.logo} 
                 alt={`${brand.name} logo`} 
-                width={150}
-                height={75}
+                width={120}
+                height={60}
                 className="object-contain transition-all duration-300"
               />
             </div>

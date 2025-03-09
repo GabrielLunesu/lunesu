@@ -16,14 +16,13 @@ export default function About() {
       { threshold: 0.1 }
     );
 
-    if (aboutRef.current) {
-      observer.observe(aboutRef.current);
-    }
+    // Store ref in variable to use in cleanup
+    const aboutElement = aboutRef.current;
+
+    if (aboutElement) observer.observe(aboutElement);
 
     return () => {
-      if (aboutRef.current) {
-        observer.unobserve(aboutRef.current);
-      }
+      if (aboutElement) observer.unobserve(aboutElement);
     };
   }, []);
 
@@ -35,8 +34,8 @@ export default function About() {
           <div className="w-20 h-1 bg-primary mx-auto"></div>
         </div>
 
-        <div ref={aboutRef} className="flex flex-col md:flex-row items-center gap-8 md:gap-16 opacity-0">
-          <div className="w-full md:w-1/2 relative h-[300px] md:h-[400px]">
+        <div ref={aboutRef} className="flex flex-col md:flex-row items-center gap-12 opacity-0">
+          <div className="w-full md:w-1/2 relative h-[350px] md:h-[450px]">
             <Image 
               src="https://placehold.co/800x600/CCCCCC/666666/png?text=Werkplaats" 
               alt="Donato Lunesu Werkplaats" 

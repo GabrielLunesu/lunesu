@@ -17,14 +17,13 @@ export default function WorkArea() {
       { threshold: 0.1 }
     );
 
-    if (workAreaRef.current) {
-      observer.observe(workAreaRef.current);
-    }
+    // Store ref in variable to use in cleanup
+    const workAreaElement = workAreaRef.current;
+
+    if (workAreaElement) observer.observe(workAreaElement);
 
     return () => {
-      if (workAreaRef.current) {
-        observer.unobserve(workAreaRef.current);
-      }
+      if (workAreaElement) observer.unobserve(workAreaElement);
     };
   }, []);
 
@@ -36,12 +35,12 @@ export default function WorkArea() {
 
   return (
     <section id="werkgebied" className="section py-16">
-      <div className="container mx-auto px-4">
+      <div className="container-narrow">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Ons Werkgebied</h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-6"></div>
+          <div className="divider mx-auto mb-6"></div>
           <p className="text-gray-700 max-w-3xl mx-auto">
-            Wij zijn actief in heel Nederland en bieden onze diensten aan voor zowel particuliere als zakelijke klanten. Bekijk hieronder in welke regio's wij voornamelijk werkzaam zijn.
+            Wij zijn actief in heel Nederland en bieden onze diensten aan voor zowel particuliere als zakelijke klanten. Bekijk hieronder in welke regio&apos;s wij voornamelijk werkzaam zijn.
           </p>
         </div>
 
@@ -61,7 +60,7 @@ export default function WorkArea() {
           <div className="w-full md:w-1/2">
             <h3 className="text-2xl font-semibold mb-4">Landelijke dekking, lokale service</h3>
             <p className="text-gray-700 mb-6">
-              Als erkend installateur voor warmtepompen en airconditioning zijn wij werkzaam door heel Nederland. Onze focus ligt op de volgende regio's, maar ook daarbuiten staan wij voor u klaar:
+              Als erkend installateur voor warmtepompen en airconditioning zijn wij werkzaam door heel Nederland. Onze focus ligt op de volgende regio&apos;s, maar ook daarbuiten staan wij voor u klaar:
             </p>
             
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-3 gap-x-4 mb-8">
@@ -76,7 +75,7 @@ export default function WorkArea() {
             </div>
             
             <p className="text-gray-700 mb-6">
-              Woont u niet in een van bovenstaande regio's? Neem dan gerust contact met ons op om te bespreken wat wij voor u kunnen betekenen.
+              Woont u niet in een van bovenstaande regio&apos;s? Neem dan gerust contact met ons op om te bespreken wat wij voor u kunnen betekenen.
             </p>
             
             <Link 

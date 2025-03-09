@@ -16,14 +16,13 @@ export default function Brands() {
       { threshold: 0.1 }
     );
 
-    if (brandsRef.current) {
-      observer.observe(brandsRef.current);
-    }
+    // Store ref in variable to use in cleanup
+    const brandsElement = brandsRef.current;
+
+    if (brandsElement) observer.observe(brandsElement);
 
     return () => {
-      if (brandsRef.current) {
-        observer.unobserve(brandsRef.current);
-      }
+      if (brandsElement) observer.unobserve(brandsElement);
     };
   }, []);
 

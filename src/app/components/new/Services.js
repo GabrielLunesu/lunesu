@@ -62,7 +62,7 @@ export default function Services() {
           <div className="divider mx-auto"></div>
           <p className="text-black max-w-2xl mx-auto">
             Wij bieden een compleet pakket aan diensten voor warmtepompen en airconditioning. 
-            Van installatie tot onderhoud en reparatie.
+            Van installatie tot onderhoud.
           </p>
         </div>
 

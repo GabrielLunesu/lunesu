@@ -48,16 +48,7 @@ export default function Footer() {
                   Warmtepomp Installatie
                 </Link>
               </li>
-              <li>
-                <Link href="#services" className="text-black hover:text-primary transition-colors text-sm md:text-base">
-                  Airco Service
-                </Link>
-              </li>
-              <li>
-                <Link href="#services" className="text-black hover:text-primary transition-colors text-sm md:text-base">
-                  Warmtepomp Service
-                </Link>
-              </li>
+             
             </ul>
           </div>
           

@@ -48,6 +48,10 @@ export default function Brands() {
     {
       name: 'Toshiba',
       logo: '/logo/toshiba-logo.png'
+    },
+    {
+      name: 'Panasonic',
+      logo: '/logo/panasonic.png'
     }
   ];
 
@@ -61,7 +65,7 @@ export default function Brands() {
 
         <div 
           ref={brandsRef}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 items-center opacity-0"
+          className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-8 items-center opacity-0"
         >
           {brands.map((brand, index) => (
             <div key={index} className="flex items-center justify-center p-3 md:p-4">

@@ -315,7 +315,7 @@ export default function Contact() {
                 </li>
                 <li className="flex justify-between text-sm md:text-base text-black">
                   <span>Zondag</span>
-                  <span>Gesloten</span>
+                  <span>09:00 - 15:00</span>
                 </li>
               </ul>
             </div>

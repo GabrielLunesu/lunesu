@@ -78,7 +78,7 @@ export default function About() {
             <div className="grid grid-cols-2 gap-3 md:gap-4">
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
-                <span className="text-black text-sm md:text-base">Gecertificeerd</span>
+                <span className="text-black text-sm md:text-base">Vakkundig</span>
               </div>
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
@@ -86,7 +86,7 @@ export default function About() {
               </div>
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
-                <span className="text-black text-sm md:text-base">Vakkundig</span>
+                <span className="text-black text-sm md:text-base">Flexibel</span>
               </div>
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>

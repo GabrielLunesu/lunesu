@@ -27,6 +27,12 @@ export default function Footer() {
             <p className="text-black text-sm md:text-base mb-4">
               Uw erkende installateur voor warmtepompen en airconditioning in Parkstad. Met meer dan 30 jaar ervaring.
             </p>
+            <div className="text-black text-sm md:text-base mb-4">
+              <p>DAA Lunesu</p>
+              <p>IBAN: NL29 INGB 0650962230</p>
+              <p>BTW ID: NL001816013B68</p>
+              <p>KVK: 14090765</p>
+            </div>
           </div>
           
           <div>

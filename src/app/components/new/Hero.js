@@ -89,7 +89,7 @@ export default function Hero() {
           </div>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-20 md:mt-24 pt-8 border-t border-gray-200">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mt-20 md:mt-24 pt-8 border-t border-gray-200">
           <div className="text-center">
             <div className="text-2xl md:text-3xl font-bold text-primary mb-1 md:mb-2">30+</div>
             <p className="text-sm md:text-base text-black">Jaren ervaring</p>
@@ -103,11 +103,6 @@ export default function Hero() {
           <div className="text-center">
             <div className="text-2xl md:text-3xl font-bold text-primary mb-1 md:mb-2">100%</div>
             <p className="text-sm md:text-base text-black">Gecertificeerd</p>
-          </div>
-          
-          <div className="text-center">
-            <div className="text-2xl md:text-3xl font-bold text-primary mb-1 md:mb-2">24/7</div>
-            <p className="text-sm md:text-base text-black">Service</p>
           </div>
         </div>
       </div>

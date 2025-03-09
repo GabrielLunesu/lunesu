@@ -302,18 +302,18 @@ export default function Contact() {
               </div>
             </div>
             
-            <div className="card p-4 md:p-8 bg-primary text-white">
-              <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4">Openingstijden</h3>
+            <div className="card p-4 md:p-8 bg-primary">
+              <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-black">Openingstijden</h3>
               <ul className="space-y-2">
-                <li className="flex justify-between text-sm md:text-base">
+                <li className="flex justify-between text-sm md:text-base text-black">
                   <span>Maandag - Vrijdag</span>
                   <span>08:00 - 17:00</span>
                 </li>
-                <li className="flex justify-between text-sm md:text-base">
+                <li className="flex justify-between text-sm md:text-base text-black">
                   <span>Zaterdag</span>
                   <span>Gesloten</span>
                 </li>
-                <li className="flex justify-between text-sm md:text-base">
+                <li className="flex justify-between text-sm md:text-base text-black">
                   <span>Zondag</span>
                   <span>Gesloten</span>
                 </li>

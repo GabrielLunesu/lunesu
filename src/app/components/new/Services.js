@@ -51,27 +51,7 @@ export default function Services() {
       title: 'Warmtepomp Installatie',
       description: 'Vakkundige installatie van warmtepompen voor duurzame verwarming en koeling.',
       icon: '/icons/heat-pump.svg',
-    },
-    {
-      title: 'Airco Service',
-      description: 'Regelmatig onderhoud van uw airconditioningsysteem voor optimale prestaties.',
-      icon: '/icons/ac-service.svg',
-    },
-    {
-      title: 'Warmtepomp Service',
-      description: 'Professioneel onderhoud van uw warmtepomp voor optimale werking en energiebesparing.',
-      icon: '/icons/heat-service.svg',
-    },
-    {
-      title: 'Airco Reparatie',
-      description: 'Snelle en effectieve reparatie van airconditioningsystemen bij storingen.',
-      icon: '/icons/ac-repair.svg',
-    },
-    {
-      title: 'Warmtepomp Reparatie',
-      description: 'Deskundige reparatie van alle soorten warmtepompen bij storingen.',
-      icon: '/icons/heat-repair.svg',
-    },
+    }
   ];
 
   return (
@@ -86,7 +66,7 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mx-auto max-w-3xl">
           {services.map((service, index) => (
             <div
               key={index}

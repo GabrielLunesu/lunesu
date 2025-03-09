@@ -13,6 +13,8 @@ export default function Contact() {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   
   const headingRef = useRef(null);
   const formRef = useRef(null);
@@ -78,7 +80,7 @@ export default function Contact() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     if (!validateForm()) {
@@ -86,10 +88,25 @@ export default function Contact() {
     }
     
     setIsSubmitting(true);
+    setSubmitSuccess(false);
+    setSubmitError(false);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.error || 'Er is iets misgegaan bij het verzenden van uw bericht');
+      }
+      
+      // Success
       setSubmitSuccess(true);
       setFormData({
         name: '',
@@ -98,11 +115,26 @@ export default function Contact() {
         message: ''
       });
       
+      // Scroll to form top to show success message
+      if (formRef.current) {
+        formRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
+      
       // Reset success message after 5 seconds
       setTimeout(() => {
         setSubmitSuccess(false);
       }, 5000);
-    }, 1500);
+    } catch (error) {
+      setSubmitError(true);
+      setErrorMessage(error.message);
+      
+      // Reset error message after 5 seconds
+      setTimeout(() => {
+        setSubmitError(false);
+      }, 5000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -126,6 +158,17 @@ export default function Contact() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                     <p className="font-medium">Bedankt voor uw bericht! We nemen zo spoedig mogelijk contact met u op.</p>
+                  </div>
+                </div>
+              )}
+              
+              {submitError && (
+                <div className="bg-red-50 border-l-4 border-red-500 text-red-700 p-4 rounded mb-6 animate-fade-in">
+                  <div className="flex">
+                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <p className="font-medium">{errorMessage || 'Er is iets misgegaan. Probeer het later nog eens of neem telefonisch contact met ons op.'}</p>
                   </div>
                 </div>
               )}

@@ -102,7 +102,7 @@ export default function Hero() {
           
           <div className="text-center">
             <div className="text-2xl md:text-3xl font-bold text-primary mb-1 md:mb-2">100%</div>
-            <p className="text-sm md:text-base text-black">Gecertificeerd</p>
+            <p className="text-sm md:text-base text-black">Inzet</p>
           </div>
         </div>
       </div>

@@ -16,7 +16,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center mb-4">
               <Image 
-                src="/favicon.svg" 
+                src="/logo.png" 
                 alt="Donato Lunesu Logo" 
                 width={36} 
                 height={36} 
@@ -93,12 +93,13 @@ export default function Footer() {
             >
               Privacybeleid
             </button>
-            <button 
-              onClick={() => setShowTermsModal(true)} 
-              className="text-black hover:text-primary text-xs md:text-sm transition-colors"
+            <a 
+              href="/algemene-voorwaarden.pdf" 
+              download="Algemene Voorwaarden Donato Lunesu Warmtepomptechniek.pdf"
+              className="text-black hover:text-primary text-xs md:text-sm transition-colors cursor-pointer"
             >
               Algemene voorwaarden
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -168,7 +169,7 @@ export default function Footer() {
       {/* Terms and Conditions Modal */}
       {showTermsModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+          <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[80vh] overflow-y-auto">
             <div className="p-6">
               <div className="flex justify-between items-center mb-4">
                 <h2 className="text-xl font-bold text-black">Algemene Voorwaarden</h2>
@@ -181,46 +182,59 @@ export default function Footer() {
                   </svg>
                 </button>
               </div>
-              <div className="text-black text-sm md:text-base space-y-4">
+              <div className="text-black text-sm md:text-base space-y-4 pr-2">
+                <p className="font-bold">ALGEMENE VOORWAARDEN DONATO LUNESU WARMTEPOMPTECHNIEK</p>
                 <p>
-                  <strong>Laatst bijgewerkt: {currentYear}</strong>
+                  Donato Lunesu warmtepomptechniek, gevestigd in de gemeente Heerlen en kantoorhoudende te Grasbroekerweg 141, 6412 BD in Heerlen, 
+                  ingeschreven in het handelsregister van de Kamer van Koophandel onder nummer 14090765, hierna te noemen: "DLW".
                 </p>
-                <h3 className="text-lg font-semibold mt-4">1. Algemeen</h3>
+                
+                <h3 className="text-lg font-semibold">Artikel 1 Definities</h3>
                 <p>
-                  Deze algemene voorwaarden zijn van toepassing op alle aanbiedingen, werkzaamheden, offertes en overeenkomsten tussen Donato Lunesu en opdrachtgevers, respectievelijk hun rechtsopvolgers.
+                  In deze Algemene Voorwaarden hebben begrippen met een hoofdletter de navolgende betekenis:
                 </p>
-                <h3 className="text-lg font-semibold mt-4">2. Offertes en aanbiedingen</h3>
                 <p>
-                  Alle offertes en aanbiedingen van Donato Lunesu zijn vrijblijvend, tenzij in de offerte een termijn voor aanvaarding is gesteld. Een offerte of aanbieding vervalt indien het product waarop de offerte of de aanbieding betrekking heeft in de tussentijd niet meer beschikbaar is.
+                  <strong>Algemene Voorwaarden:</strong> de onderhavige Algemene Voorwaarden.<br />
+                  <strong>Consument:</strong> de natuurlijke persoon die niet handelt in de uitoefening van beroep of bedrijf en een overeenkomst aangaat met DLW.<br />
+                  <strong>Diensten:</strong> door of namens DLW (al dan niet in regie) uitgevoerde Opdrachten, activiteiten en/of verstrekte adviezen.<br />
+                  <strong>Duurovereenkomst:</strong> Overeenkomst waarin Partijen zich verbinden om op achtereenvolgende tijdstippen voortdurende, telkens 
+                  terugkerende of opeenvolgende prestaties te verrichten.<br />
+                  <strong>Goed of Goederen:</strong> ieder stoffelijk object welke onderdeel uitmaakt van de Overeenkomst.<br />
+                  <strong>Offerte:</strong> het doen van een (Schriftelijke) aanbieding.<br />
+                  <strong>Opdrachtbevestiging:</strong> Schriftelijke bevestiging van de Offerte door DLW.<br />
+                  <strong>Opdrachtgever:</strong> onder Opdrachtgever wordt verstaan iedere partij die (mede) de Opdracht geeft/geven tot dienstverlening, advisering of 
+                  het uitbrengen van een Offerte.<br />
+                  <strong>Overeenkomst of Opdracht:</strong> onder Overeenkomst of Opdracht wordt verstaan de verbintenis welke DLW met haar Opdrachtgever(s) 
+                  aangaat.<br />
+                  <strong>Partijen:</strong> DLW en Opdrachtgever(s) waartussen een (Duur)Overeenkomst tot stand is gekomen.<br />
+                  <strong>Schriftelijk:</strong> met Schriftelijk wordt ook per e-mail, per fax of enige andere wijze van communicatie bedoeld, die met het oog op de stand 
+                  der techniek en de in het maatschappelijk verkeer geldende opvattingen hiermee gelijk gesteld kunnen worden.<br />
+                  <strong>Werkzaamheden:</strong> alle werkzaamheden en Diensten waartoe Opdracht is gegeven, of die door DLW uit anderen hoofden, direct verband 
+                  houdend, met de Overeenkomst of Offerte worden verricht.<br />
+                  <strong>Zakelijke klant:</strong> Iedere natuurlijk – en/of rechtspersoon, die staat ingeschreven bij het handelsregister van de Kamer van Koophandel of 
+                  enig ander handelsregister en die handelend in de uitoefening van beroep of bedrijf een overeenkomst met DLW aangaat dan wel aan 
+                  wie DLW een aanbieding doet.
                 </p>
-                <h3 className="text-lg font-semibold mt-4">3. Uitvoering van de overeenkomst</h3>
-                <p>
-                  Donato Lunesu zal de overeenkomst naar beste inzicht en vermogen en overeenkomstig de eisen van goed vakmanschap uitvoeren. Alle werkzaamheden worden uitgevoerd op basis van een inspanningsverbintenis.
-                </p>
-                <h3 className="text-lg font-semibold mt-4">4. Betaling</h3>
-                <p>
-                  Betaling dient te geschieden binnen 14 dagen na factuurdatum, op een door Donato Lunesu aan te geven wijze in de valuta waarin is gefactureerd, tenzij schriftelijk anders door Donato Lunesu aangegeven.
-                </p>
-                <h3 className="text-lg font-semibold mt-4">5. Garantie</h3>
-                <p>
-                  Donato Lunesu staat in voor de deugdelijkheid van de door hem geleverde diensten en producten conform de daaraan gestelde eisen in de overeenkomst. Voor alle producten geldt de fabrieksgarantie zoals verleend door de producent van het product.
-                </p>
-                <h3 className="text-lg font-semibold mt-4">6. Aansprakelijkheid</h3>
-                <p>
-                  De aansprakelijkheid van Donato Lunesu is beperkt tot het bedrag dat in het desbetreffende geval onder de aansprakelijkheidsverzekering wordt uitbetaald, vermeerderd met het bedrag van het eigen risico.
-                </p>
-                <h3 className="text-lg font-semibold mt-4">7. Overmacht</h3>
-                <p>
-                  Donato Lunesu is niet gehouden tot het nakomen van enige verplichting jegens de opdrachtgever indien hij daartoe gehinderd wordt als gevolg van een omstandigheid die niet is te wijten aan schuld.
-                </p>
-                <h3 className="text-lg font-semibold mt-4">8. Toepasselijk recht</h3>
-                <p>
-                  Op alle rechtsbetrekkingen waarbij Donato Lunesu partij is, is uitsluitend het Nederlands recht van toepassing.
-                </p>
-                <h3 className="text-lg font-semibold mt-4">9. Wijziging voorwaarden</h3>
-                <p>
-                  Donato Lunesu is bevoegd wijzigingen in deze voorwaarden aan te brengen. De wijzigingen treden in werking op het aangekondigde tijdstip.
-                </p>
+                
+                <h3 className="text-lg font-semibold">Artikel 2 Toepasselijkheid</h3>
+                <p>2.1. Deze Algemene Voorwaarden zijn van toepassing op iedere en alle onderhandeling, aanbieding, Offerte, Opdrachtbevestiging, 
+                Overeenkomst, Diensten, Werkzaamheden of overige rechtsbetrekking waarop DLW deze voorwaarden van toepassing heeft verklaard, 
+                voor zover van deze voorwaarden niet door Partijen uitdrukkelijk en Schriftelijk is afgeweken.</p>
+                
+                <p>2.2. Eventuele Algemene Voorwaarden of andere voorwaarden van Opdrachtgever zijn niet geldig. De toepasselijkheid daarvan wordt door 
+                DLW uitdrukkelijk van de hand gewezen.</p>
+                
+                <p className="italic text-gray-600 mt-4">De volledige voorwaarden zijn beschikbaar op www.lunesu.nl of op aanvraag. Deze voorwaarden zijn gedeponeerd op 1 maart 2023 en bevatten 27 artikelen die alle rechten en plichten beschrijven.</p>
+                
+                <h3 className="text-lg font-semibold mt-4">Artikel 26 Kennisneming Algemene Voorwaarden</h3>
+                <p>26.1. Deze Algemene Voorwaarden gelden met ingang van een maart tweeduizend drie en twintig (01/03/2023) en liggen ter inzage ten kantore van DLW.</p>
+                <p>26.2. Deze Algemene Voorwaarden worden met de Offerte aan Opdrachtgever toegestuurd en/of aan deze ter hand gesteld, dan wel – indien dit redelijkerwijs niet mogelijk is – op diens eerste verzoek kosteloos aan Opdrachtgever toegezonden.</p>
+                <p>26.3. Deze Algemene Voorwaarden zijn eveneens te raadplegen via de website van DLW www.lunesu.nl.</p>
+                
+                <h3 className="text-lg font-semibold">Artikel 27 Toepasselijk recht</h3>
+                <p>27.1. Op de rechtsverhouding tussen DLW en Opdrachtgever is Nederlands recht van toepassing.</p>
+                <p>27.2. In geval van een geschil zal dit geschil worden voorgelegd aan de bevoegde rechter in het arrondissement Limburg locatie Maastricht, tenzij dwingende competentieregels dit verhinderen.</p>
+                <p>27.3. Partijen kunnen voorts een andere vorm van geschillenbeslechting zoals bijvoorbeeld arbitrage of mediation overeenkomen, welke het recht van Partijen om te verzoeken om een rechtelijke uitspraak nimmer zullen beperken.</p>
               </div>
             </div>
           </div>
@@ -228,4 +242,4 @@ export default function Footer() {
       )}
     </footer>
   );
-} 
+}

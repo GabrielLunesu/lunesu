@@ -29,7 +29,7 @@ export const metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.svg' },
+      { url: '/logo.png' },
     ],
   },
 };
@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="nl" className="scroll-smooth">
       <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/logo.png" type="image/png" />
       </head>
       <body
         className={`${inter.variable} font-sans antialiased`}

@@ -28,13 +28,14 @@ export default function Navbar() {
     <header className={`navbar fixed w-full z-50 ${scrolled ? 'py-2' : 'py-3 md:py-5'}`}>
       <div className="container-narrow flex items-center justify-between">
         <Link href="/" className="flex items-center">
-          <div className="relative h-8 w-8 md:h-10 md:w-10 mr-2 md:mr-3">
+          <div className="relative h-10 w-10 md:h-12 md:w-12 mr-2 md:mr-3">
             <Image 
-              src="/favicon.svg" 
+              src="/logo.png" 
               alt="Donato Lunesu Logo" 
-              width={40} 
-              height={40} 
+              width={48}
+              height={48}
               className="object-contain"
+              style={{ filter: 'drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.1))' }}
             />
           </div>
           <span className="font-bold text-base md:text-xl tracking-tight text-black">Donato Lunesu</span>

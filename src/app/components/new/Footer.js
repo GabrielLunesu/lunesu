@@ -7,7 +7,6 @@ import Image from 'next/image';
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const [showPrivacyModal, setShowPrivacyModal] = useState(false);
-  const [showTermsModal, setShowTermsModal] = useState(false);
   
   return (
     <footer className="bg-white border-t border-gray-200 pt-10 md:pt-12 pb-6">
@@ -160,81 +159,6 @@ export default function Footer() {
                 <p>
                   Deze privacyverklaring kan worden gewijzigd. Eventuele wijzigingen worden op deze pagina gepubliceerd.
                 </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Terms and Conditions Modal */}
-      {showTermsModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[80vh] overflow-y-auto">
-            <div className="p-6">
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-xl font-bold text-black">Algemene Voorwaarden</h2>
-                <button 
-                  onClick={() => setShowTermsModal(false)}
-                  className="text-gray-500 hover:text-black"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-                  </svg>
-                </button>
-              </div>
-              <div className="text-black text-sm md:text-base space-y-4 pr-2">
-                <p className="font-bold">ALGEMENE VOORWAARDEN DONATO LUNESU WARMTEPOMPTECHNIEK</p>
-                <p>
-                  Donato Lunesu warmtepomptechniek, gevestigd in de gemeente Heerlen en kantoorhoudende te Grasbroekerweg 141, 6412 BD in Heerlen, 
-                  ingeschreven in het handelsregister van de Kamer van Koophandel onder nummer 14090765, hierna te noemen: "DLW".
-                </p>
-                
-                <h3 className="text-lg font-semibold">Artikel 1 Definities</h3>
-                <p>
-                  In deze Algemene Voorwaarden hebben begrippen met een hoofdletter de navolgende betekenis:
-                </p>
-                <p>
-                  <strong>Algemene Voorwaarden:</strong> de onderhavige Algemene Voorwaarden.<br />
-                  <strong>Consument:</strong> de natuurlijke persoon die niet handelt in de uitoefening van beroep of bedrijf en een overeenkomst aangaat met DLW.<br />
-                  <strong>Diensten:</strong> door of namens DLW (al dan niet in regie) uitgevoerde Opdrachten, activiteiten en/of verstrekte adviezen.<br />
-                  <strong>Duurovereenkomst:</strong> Overeenkomst waarin Partijen zich verbinden om op achtereenvolgende tijdstippen voortdurende, telkens 
-                  terugkerende of opeenvolgende prestaties te verrichten.<br />
-                  <strong>Goed of Goederen:</strong> ieder stoffelijk object welke onderdeel uitmaakt van de Overeenkomst.<br />
-                  <strong>Offerte:</strong> het doen van een (Schriftelijke) aanbieding.<br />
-                  <strong>Opdrachtbevestiging:</strong> Schriftelijke bevestiging van de Offerte door DLW.<br />
-                  <strong>Opdrachtgever:</strong> onder Opdrachtgever wordt verstaan iedere partij die (mede) de Opdracht geeft/geven tot dienstverlening, advisering of 
-                  het uitbrengen van een Offerte.<br />
-                  <strong>Overeenkomst of Opdracht:</strong> onder Overeenkomst of Opdracht wordt verstaan de verbintenis welke DLW met haar Opdrachtgever(s) 
-                  aangaat.<br />
-                  <strong>Partijen:</strong> DLW en Opdrachtgever(s) waartussen een (Duur)Overeenkomst tot stand is gekomen.<br />
-                  <strong>Schriftelijk:</strong> met Schriftelijk wordt ook per e-mail, per fax of enige andere wijze van communicatie bedoeld, die met het oog op de stand 
-                  der techniek en de in het maatschappelijk verkeer geldende opvattingen hiermee gelijk gesteld kunnen worden.<br />
-                  <strong>Werkzaamheden:</strong> alle werkzaamheden en Diensten waartoe Opdracht is gegeven, of die door DLW uit anderen hoofden, direct verband 
-                  houdend, met de Overeenkomst of Offerte worden verricht.<br />
-                  <strong>Zakelijke klant:</strong> Iedere natuurlijk – en/of rechtspersoon, die staat ingeschreven bij het handelsregister van de Kamer van Koophandel of 
-                  enig ander handelsregister en die handelend in de uitoefening van beroep of bedrijf een overeenkomst met DLW aangaat dan wel aan 
-                  wie DLW een aanbieding doet.
-                </p>
-                
-                <h3 className="text-lg font-semibold">Artikel 2 Toepasselijkheid</h3>
-                <p>2.1. Deze Algemene Voorwaarden zijn van toepassing op iedere en alle onderhandeling, aanbieding, Offerte, Opdrachtbevestiging, 
-                Overeenkomst, Diensten, Werkzaamheden of overige rechtsbetrekking waarop DLW deze voorwaarden van toepassing heeft verklaard, 
-                voor zover van deze voorwaarden niet door Partijen uitdrukkelijk en Schriftelijk is afgeweken.</p>
-                
-                <p>2.2. Eventuele Algemene Voorwaarden of andere voorwaarden van Opdrachtgever zijn niet geldig. De toepasselijkheid daarvan wordt door 
-                DLW uitdrukkelijk van de hand gewezen.</p>
-                
-                <p className="italic text-gray-600 mt-4">De volledige voorwaarden zijn beschikbaar op www.lunesu.nl of op aanvraag. Deze voorwaarden zijn gedeponeerd op 1 maart 2023 en bevatten 27 artikelen die alle rechten en plichten beschrijven.</p>
-                
-                <h3 className="text-lg font-semibold mt-4">Artikel 26 Kennisneming Algemene Voorwaarden</h3>
-                <p>26.1. Deze Algemene Voorwaarden gelden met ingang van een maart tweeduizend drie en twintig (01/03/2023) en liggen ter inzage ten kantore van DLW.</p>
-                <p>26.2. Deze Algemene Voorwaarden worden met de Offerte aan Opdrachtgever toegestuurd en/of aan deze ter hand gesteld, dan wel – indien dit redelijkerwijs niet mogelijk is – op diens eerste verzoek kosteloos aan Opdrachtgever toegezonden.</p>
-                <p>26.3. Deze Algemene Voorwaarden zijn eveneens te raadplegen via de website van DLW www.lunesu.nl.</p>
-                
-                <h3 className="text-lg font-semibold">Artikel 27 Toepasselijk recht</h3>
-                <p>27.1. Op de rechtsverhouding tussen DLW en Opdrachtgever is Nederlands recht van toepassing.</p>
-                <p>27.2. In geval van een geschil zal dit geschil worden voorgelegd aan de bevoegde rechter in het arrondissement Limburg locatie Maastricht, tenzij dwingende competentieregels dit verhinderen.</p>
-                <p>27.3. Partijen kunnen voorts een andere vorm van geschillenbeslechting zoals bijvoorbeeld arbitrage of mediation overeenkomen, welke het recht van Partijen om te verzoeken om een rechtelijke uitspraak nimmer zullen beperken.</p>
               </div>
             </div>
           </div>

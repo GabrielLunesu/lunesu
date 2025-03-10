@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import nodemailer from 'nodemailer';
 
 export async function POST(request) {
   try {
@@ -25,30 +26,22 @@ export async function POST(request) {
       ${message}
     `;
 
-    // In a real implementation, you would use a service like Nodemailer, SendGrid, etc.
-    // For demonstration purposes, we'll log the email content and return a success response
-    console.log('Email would be sent to contact@lunesu.nl with content:');
-    console.log(emailContent);
-
-    // For actual implementation, uncomment and configure the following code:
-    /*
+    // Create a transporter using SMTP
     const transporter = nodemailer.createTransport({
-      host: process.env.EMAIL_HOST,
-      port: process.env.EMAIL_PORT,
-      secure: true,
+      service: 'gmail', // You can change this to your email provider
       auth: {
         user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASSWORD,
+        pass: process.env.EMAIL_APP_PASSWORD,
       },
     });
 
+    // Send the email
     await transporter.sendMail({
-      from: process.env.EMAIL_FROM,
+      from: process.env.EMAIL_USER,
       to: 'contact@lunesu.nl',
       subject: 'Nieuw contactformulier bericht van website',
       text: emailContent,
     });
-    */
 
     return NextResponse.json({ success: true });
   } catch (error) {

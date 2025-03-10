@@ -61,8 +61,8 @@ export default function Services() {
           <h2 className="text-2xl md:text-4xl font-bold mb-4 text-black">Onze Diensten</h2>
           <div className="divider mx-auto"></div>
           <p className="text-black max-w-2xl mx-auto">
-            Wij bieden een compleet pakket aan diensten voor warmtepompen en airconditioning. 
-            Van installatie tot onderhoud.
+            Wij bieden een compleet pakket aan diensten voor warmtepompen en airconditioning in samenwerking met DM-Installatietechniek. 
+            
           </p>
         </div>
 

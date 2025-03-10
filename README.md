@@ -38,7 +38,25 @@ npm install
 npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in je browser.
+4. Configureer de email functionaliteit:
+   - Maak een `.env.local` bestand aan in de root van het project
+   - Voeg de volgende variabelen toe:
+   ```
+   EMAIL_USER=your_email@gmail.com
+   EMAIL_APP_PASSWORD=your_app_password
+   ```
+   - Voor Gmail moet je een App Password gebruiken, niet je reguliere wachtwoord
+   - Om een App Password te maken:
+     1. Ga naar je Google Account instellingen
+     2. Selecteer Beveiliging
+     3. Onder "Inloggen bij Google," selecteer 2-stapsverificatie
+     4. Onderaan de pagina, selecteer App-wachtwoorden
+     5. Selecteer "Mail" als app en "Anders" als apparaat
+     6. Voer een naam in (bijv. "Lunesu Website")
+     7. Klik op "Genereren"
+     8. Kopieer het gegenereerde wachtwoord en plak het als EMAIL_APP_PASSWORD
+
+5. Open [http://localhost:3000](http://localhost:3000) in je browser.
 
 ## Productie build
 

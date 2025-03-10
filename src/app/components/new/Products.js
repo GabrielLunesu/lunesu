@@ -35,23 +35,23 @@ export default function Products() {
   const products = [
     {
       name: 'Wandmodel Airco',
-      description: 'Ideaal voor kleinere ruimtes zoals slaapkamers en woonkamers. Eenvoudig te installeren en energiezuinig.',
-      image: 'https://placehold.co/600x400/CCCCCC/666666/png?text=Wandmodel+Airco'
+      description: 'Ideaal voor kleinere ruimtes zoals slaapkamers en woonkamers. Eenvoudig te installeren en energiezuinig. Zie bijvoorbeeld de Ururu Sarara van Daikin met een SCOP van 6,9.',
+      image: '/units/wandmodel.png'
     },
     {
       name: 'Vloermodel Airco',
-      description: 'Perfect voor ruimtes met weinig wandruimte. Zorgt voor een gelijkmatige luchtstroom en optimaal comfort.',
-      image: 'https://placehold.co/600x400/CCCCCC/666666/png?text=Vloermodel+Airco'
+      description: 'Perfect voor ruimtes met weinig wandruimte. Zorgt voor een gelijkmatige luchtstroom en optimaal comfort vanwege de warme luchtstroom over de vloer.',
+      image: '/units/vloermodel.png'
     },
     {
       name: 'Plafondmodel Airco',
       description: 'Geschikt voor grotere ruimtes zoals kantoren en winkels. Onopvallend geïntegreerd in het plafond.',
-      image: 'https://placehold.co/600x400/CCCCCC/666666/png?text=Plafondmodel+Airco'
+      image: '/units/plafondunit.png'
     },
     {
       name: 'Buitenunit Warmtepomp',
-      description: 'Krachtige en efficiënte warmtepompen voor verwarming en koeling van uw woning of bedrijfspand.',
-      image: 'https://placehold.co/600x400/CCCCCC/666666/png?text=Buitenunit+Warmtepomp'
+      description: 'Krachtige en efficiënte warmtepompen voor verwarming en koeling van uw woning of bedrijfspand. Zie bijvoorbeeld de Technea ACP312P met een SCOP van 6,02.',
+      image: '/units/warmtepomp.webp'
     }
   ];
 

@@ -49,7 +49,7 @@ export default function About() {
           <h2 className="text-2xl md:text-4xl font-bold mb-4 text-black">Over Ons</h2>
           <div className="divider mx-auto"></div>
           <p className="text-black max-w-2xl mx-auto">
-            Maak kennis met Donato Lunesu, uw specialist in klimaatbeheersing met meer dan 30 jaar ervaring in Parkstad.
+            Maak kennis met <b>Donato Lunesu</b>, uw specialist in klimaatbeheersing met meer dan 30 jaar ervaring in Parkstad.
           </p>
         </div>
 
@@ -69,10 +69,10 @@ export default function About() {
             <h3 className="text-xl md:text-2xl font-semibold mb-4 text-black">Vakmanschap & Ervaring</h3>
             <div className="divider"></div>
             <p className="text-black text-sm md:text-base mb-4">
-              Al meer dan 30 jaar ben ik, Donato Lunesu, actief in de wereld van klimaatbeheersing. Wat begon als een passie voor techniek en comfort, is uitgegroeid tot een gespecialiseerd bedrijf dat staat voor kwaliteit, betrouwbaarheid en vakmanschap in Parkstad en omgeving.
+              Al meer dan 30 jaar ben ik, Donato Lunesu, actief in de wereld van klimaatbeheersing. Wat begon als een passie voor techniek en comfort, is uitgegroeid tot een bedrijf dat staat voor kwaliteit, betrouwbaarheid en vakmanschap in Parkstad en omgeving.
             </p>
             <p className="text-black text-sm md:text-base mb-6">
-              Mijn expertise ligt in het installeren, onderhouden en repareren van warmtepompen en airconditioningsystemen voor zowel particuliere als zakelijke klanten. Door de jaren heen heb ik bijna 3000 tevreden klanten mogen helpen met hun klimaatbehoeften.
+              Mijn expertise ligt in het installeren van warmtepompen en airconditioningsystemen voor zowel particuliere als zakelijke klanten. Door de jaren heen heb ik bijna 3000 tevreden klanten mogen helpen met hun klimaatbehoeften.
             </p>
 
             <div className="grid grid-cols-2 gap-3 md:gap-4">

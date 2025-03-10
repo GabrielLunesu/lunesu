@@ -306,17 +306,14 @@ export default function Contact() {
               <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-black">Openingstijden</h3>
               <ul className="space-y-2">
                 <li className="flex justify-between text-sm md:text-base text-black">
-                  <span>Maandag - Vrijdag</span>
-                  <span>08:00 - 17:00</span>
+                  <span>Zondag - Vrijdag</span>
+                  <span>09:00 - 15:00</span>
                 </li>
                 <li className="flex justify-between text-sm md:text-base text-black">
                   <span>Zaterdag</span>
                   <span>Gesloten</span>
                 </li>
-                <li className="flex justify-between text-sm md:text-base text-black">
-                  <span>Zondag</span>
-                  <span>09:00 - 15:00</span>
-                </li>
+               
               </ul>
             </div>
           </div>

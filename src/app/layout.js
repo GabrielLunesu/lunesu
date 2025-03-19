@@ -9,7 +9,7 @@ const inter = Inter({
 
 export const metadata = {
   title: "Donato Lunesu | Warmtepomp & Airco Specialist",
-  description: "Erkende installateur voor warmtepompen en airconditioning in Nederland. Meer dan 30 jaar ervaring en bijna 3000 tevreden klanten.",
+  description: "Erkende installateur voor warmtepomp en airconditioning in Nederland. Meer dan 30 jaar ervaring en bijna 3000 tevreden klanten.",
   keywords: "warmtepomp, airco, airconditioning, installatie, reparatie, onderhoud, service, Nederland, Donato Lunesu",
   authors: [{ name: "Donato Lunesu" }],
   creator: "Donato Lunesu",

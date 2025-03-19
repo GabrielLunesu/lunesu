@@ -3,11 +3,11 @@
 :root {
   --background: #ffffff;
   --foreground: #000000;
-  --primary: #0052cc;
-  --primary-dark: #003d99;
-  --primary-light: #4d8dff;
+  --primary: #355b23;
+  --primary-dark: #294919;
+  --primary-light: #4d7e34;
   --secondary: #f5f5f5;
-  --accent: #ff9900;
+  --accent: #8aab4c;
   --gray-100: #f7f7f7;
   --gray-200: #e6e6e6;
   --gray-300: #d1d1d1;
@@ -34,11 +34,11 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
-    --primary: #1a75ff;
-    --primary-dark: #0052cc;
-    --primary-light: #80b3ff;
+    --primary: #4d7e34;
+    --primary-dark: #355b23;
+    --primary-light: #8aab4c;
     --secondary: #1a1a1a;
-    --accent: #ffad33;
+    --accent: #a8c573;
   }
 }
 
@@ -95,6 +95,56 @@ body {
   }
 }
 
+/* New animation for raindrops */
+@keyframes raindrop {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* SVG path animation */
+@keyframes dash {
+  to {
+    stroke-dashoffset: 24;
+  }
+}
+
+@keyframes dashReverse {
+  to {
+    stroke-dashoffset: -24;
+  }
+}
+
+/* Water ripple animation */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Floating animation for water-related elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 .animate-fade-in {
   animation: fadeIn 0.6s ease-out forwards;
 }
@@ -109,6 +159,35 @@ body {
 
 .animate-scale-in {
   animation: scaleIn 0.6s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-dash {
+  animation: dash 3s linear infinite;
+}
+
+.animate-dash-reverse {
+  animation: dashReverse 3s linear infinite;
+}
+
+/* Raindrop styling */
+.raindrop {
+  position: absolute;
+  background: linear-gradient(to bottom, rgba(53, 91, 35, 0.1), rgba(53, 91, 35, 0.3));
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(45deg);
+  animation: raindrop linear forwards;
+}
+
+/* Water ripple effect */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(53, 91, 35, 0.2);
+  animation: ripple 2s ease-out forwards;
 }
 
 /* Staggered animations */

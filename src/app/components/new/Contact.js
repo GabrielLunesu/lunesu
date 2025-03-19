@@ -271,8 +271,8 @@ export default function Contact() {
                   </svg>
                   <div>
                     <p className="font-medium text-black text-sm md:text-base">Adres</p>
-                    <p className="text-black text-sm md:text-base">Grasbroekerweg 141</p>
-                    <p className="text-black text-sm md:text-base">Heerlen</p>
+                    <p className="text-black text-sm md:text-base">Heerlerbaan 224</p>
+                    <p className="text-black text-sm md:text-base">6418 CH Heerlen</p>
                   </div>
                 </div>
                 
@@ -282,8 +282,8 @@ export default function Contact() {
                   </svg>
                   <div>
                     <p className="font-medium text-black text-sm md:text-base">Telefoon</p>
-                    <Link href="tel:+31618162515" className="text-primary hover:underline text-sm md:text-base">
-                      06 18 16 25 15
+                    <Link href="tel:+31645789012" className="text-primary hover:underline text-sm md:text-base">
+                      06 45 78 90 12
                     </Link>
                   </div>
                 </div>
@@ -294,27 +294,56 @@ export default function Contact() {
                   </svg>
                   <div>
                     <p className="font-medium text-black text-sm md:text-base">E-mail</p>
-                    <Link href="mailto:contact@lunesu.nl" className="text-primary hover:underline text-sm md:text-base">
-                      contact@lunesu.nl
+                    <Link href="mailto:info@moonenvochtwering.nl" className="text-primary hover:underline text-sm md:text-base">
+                      info@moonenvochtwering.nl
                     </Link>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <svg className="w-5 h-5 text-primary mt-1 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  <div>
+                    <p className="font-medium text-black text-sm md:text-base">Openingstijden</p>
+                    <p className="text-black text-sm md:text-base">Ma - Vr: 08:00 - 17:00</p>
+                    <p className="text-black text-sm md:text-base">Za: Op afspraak</p>
                   </div>
                 </div>
               </div>
             </div>
             
-            <div className="card p-4 md:p-8 bg-primary">
-              <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-black">Openingstijden</h3>
-              <ul className="space-y-2">
-                <li className="flex justify-between text-sm md:text-base text-black">
-                  <span>Zondag - Vrijdag</span>
-                  <span>09:00 - 15:00</span>
-                </li>
-                <li className="flex justify-between text-sm md:text-base text-black">
-                  <span>Zaterdag</span>
-                  <span>Gesloten</span>
-                </li>
-               
-              </ul>
+            <div className="card p-4 md:p-8">
+              <h3 className="text-lg md:text-xl font-semibold mb-4 text-black">Werkgebied</h3>
+              <p className="text-black text-sm md:text-base mb-4">
+                Wij zijn actief in Heerlen en omgeving Parkstad, waaronder:
+              </p>
+              <div className="grid grid-cols-2 gap-2">
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
+                  <span className="text-black text-sm">Heerlen</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
+                  <span className="text-black text-sm">Kerkrade</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
+                  <span className="text-black text-sm">Landgraaf</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
+                  <span className="text-black text-sm">Brunssum</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
+                  <span className="text-black text-sm">Simpelveld</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-primary rounded-full mr-2"></div>
+                  <span className="text-black text-sm">Voerendaal</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

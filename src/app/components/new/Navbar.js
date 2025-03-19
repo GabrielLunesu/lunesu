@@ -31,32 +31,35 @@ export default function Navbar() {
           <div className="relative h-10 w-10 md:h-12 md:w-12 mr-2 md:mr-3">
             <Image 
               src="/logo.png" 
-              alt="Donato Lunesu Logo" 
+              alt="Moonen Vochtwering Logo" 
               width={48}
               height={48}
               className="object-contain"
               style={{ filter: 'drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.1))' }}
             />
           </div>
-          <span className="font-bold text-base md:text-xl tracking-tight text-black">Donato Lunesu</span>
+          <span className="font-bold text-base md:text-xl tracking-tight text-black">Moonen Vochtwering</span>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6 md:space-x-8">
-          <Link href="#services" className="text-black hover:text-primary transition-all text-sm md:text-base">
+          <Link href="#diensten" className="text-black hover:text-primary transition-all text-sm md:text-base">
             Diensten
           </Link>
-          <Link href="#products" className="text-black hover:text-primary transition-all text-sm md:text-base">
-            Producten
+          <Link href="#oplossingen" className="text-black hover:text-primary transition-all text-sm md:text-base">
+            Oplossingen
           </Link>
-          <Link href="#about" className="text-black hover:text-primary transition-all text-sm md:text-base">
+          <Link href="#werkwijze" className="text-black hover:text-primary transition-all text-sm md:text-base">
+            Werkwijze
+          </Link>
+          <Link href="#over-ons" className="text-black hover:text-primary transition-all text-sm md:text-base">
             Over ons
           </Link>
           <Link href="#contact" className="text-black hover:text-primary transition-all text-sm md:text-base">
             Contact
           </Link>
           <Link href="#contact" className="btn btn-primary text-sm md:text-base">
-            Offerte aanvragen
+            Gratis inspectie
           </Link>
         </nav>
 
@@ -87,21 +90,28 @@ export default function Navbar() {
         <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 animate-fade-in">
           <div className="container-narrow py-4 flex flex-col space-y-3">
             <Link 
-              href="#services" 
+              href="#diensten" 
               className="text-black hover:text-primary py-2 transition-all text-sm"
               onClick={() => setIsOpen(false)}
             >
               Diensten
             </Link>
             <Link 
-              href="#products" 
+              href="#oplossingen" 
               className="text-black hover:text-primary py-2 transition-all text-sm"
               onClick={() => setIsOpen(false)}
             >
-              Producten
+              Oplossingen
             </Link>
             <Link 
-              href="#about" 
+              href="#werkwijze" 
+              className="text-black hover:text-primary py-2 transition-all text-sm"
+              onClick={() => setIsOpen(false)}
+            >
+              Werkwijze
+            </Link>
+            <Link 
+              href="#over-ons" 
               className="text-black hover:text-primary py-2 transition-all text-sm"
               onClick={() => setIsOpen(false)}
             >
@@ -119,7 +129,7 @@ export default function Navbar() {
               className="btn btn-primary inline-block text-center text-sm"
               onClick={() => setIsOpen(false)}
             >
-              Offerte aanvragen
+              Gratis inspectie
             </Link>
           </div>
         </div>

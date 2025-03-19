@@ -8,12 +8,12 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Moonen Vochtwering | Specialist in Parkstad",
-  description: "Professionele vochtwering oplossingen voor woningen en bedrijven in Heerlen en omgeving Parkstad. Bescherm uw eigendom tegen vocht en schimmel.",
-  keywords: "vochtwering, vochtbestrijding, waterdichting, schimmelbestrijding, vocht, kelder, kruipruimte, Heerlen, Parkstad, Limburg",
-  authors: [{ name: "Moonen Vochtwering" }],
-  creator: "Moonen Vochtwering",
-  publisher: "Moonen Vochtwering",
+  title: "Donato Lunesu | Warmtepomp & Airco Specialist",
+  description: "Erkende & gecertificeerde installateur voor warmtepompen en airconditioning in Nederland. Meer dan 30 jaar ervaring en bijna 3000 tevreden klanten.",
+  keywords: "warmtepomp, airco, airconditioning, installatie, reparatie, onderhoud, service, Nederland, Donato Lunesu",
+  authors: [{ name: "Donato Lunesu" }],
+  creator: "Donato Lunesu",
+  publisher: "Donato Lunesu",
   formatDetection: {
     email: false,
     address: false,
